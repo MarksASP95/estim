@@ -1,0 +1,36 @@
+.ant-card-cover {
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: radial-gradient(circle, transparent 70%, rgba(#fff, 0.15) 100%);
+        transition: opacity ease-in 0.1s;
+    }
+
+    &:hover {
+        &:after {
+            opacity: 1;
+        }
+    }
+}
+
+.card-description-container {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        height: 20%;
+        background: linear-gradient(to top, #fff, #fff 50%, transparent 100%);
+    }
+}
