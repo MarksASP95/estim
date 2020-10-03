@@ -1,10 +1,9 @@
 import React, { ReactNode, useState, useEffect } from 'react'
-import { Layout, Menu, Row, Col, Button } from 'antd';
+import { Layout, Menu } from 'antd';
 import {
     AppstoreOutlined,
     TeamOutlined,
     BarsOutlined,
-    PlusOutlined,
 } from '@ant-design/icons';
 
 import {
@@ -16,7 +15,6 @@ import {
 import axios from 'axios'
 
 import ProjectList from '../ProjectList/ProjectList';
-import Project from '../../models/Project';
 import NewProject from '../NewProject/NewProject';
 
 import './EstimLayout.scss';
