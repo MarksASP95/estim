@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 
 import { Form, Input, Button, Select, Row, Col, Card } from 'antd';
 
+import axios from 'axios';
+
 const { Option } = Select;
 
 const layout = {
@@ -15,7 +17,16 @@ const NewProject = () => {
     const [form] = Form.useForm();
     
     const onFinish = values => {
-        console.log(values);
+        axios({
+            method: 'post',
+            url: 'http://localhost:5000/projects',
+            data: {
+                projectData: values
+            }
+        })
+        .then(res => {
+            console.log(res)
+        })
     };
 
     const onReset = () => {
