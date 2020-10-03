@@ -1,6 +1,8 @@
 import React from 'react'
-import { Card, Row, Col, Avatar } from 'antd';
-import { ArrowRightOutlined, EditOutlined, SettingOutlined } from '@ant-design/icons';
+import { Card, Row, Col, Avatar, Button } from 'antd';
+import { ArrowRightOutlined, EditOutlined, SettingOutlined, PlusOutlined } from '@ant-design/icons';
+
+import { Link } from 'react-router-dom';
 
 import Project from '../../models/Project';
 
@@ -57,6 +59,16 @@ const ProjectList = ({ projects }: ProjectListProps) => {
             <h2>Your projects</h2>
 
             <Row gutter={[16,16]}>
+                <Col span={24}>
+                    
+                    <Link to="/new-project">
+                        <Button type="primary" icon={<PlusOutlined />}>
+                            New project
+                        </Button>
+                    </Link>
+                    
+                </Col>
+
                 {getProjectsTemplate(8)}
             </Row>
         </div>

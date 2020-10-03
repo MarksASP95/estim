@@ -14,6 +14,7 @@ import {
 
 import ProjectList from '../ProjectList/ProjectList';
 import Project from '../../models/Project';
+import NewProject from '../NewProject/NewProject';
 
 import './EstimLayout.scss';
 
@@ -109,15 +110,13 @@ const EstimLayout = () => {
                 <Content style={{ margin: '0 16px' }}>
                     <div className="site-layout-background" style={{ padding: 24, height: '100%' }}>
                         <Switch>
-                            <Route path="/projects/some_id">
-                                <h2>This is a project</h2>
-                            </Route>
-                            <Route path="/projects/another_id">
-                                <h2>This is another project</h2>
+                            <Route path="/new-project">
+                                <NewProject />
                             </Route>
                             <Route exact path="/">
                                 <ProjectList projects={mockProjects} />
                             </Route>
+
                         </Switch>
                     </div>
                 </Content>
